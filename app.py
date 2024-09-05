@@ -8,6 +8,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from datetime import timedelta
 
+import os
+
+# Install yfinance using system commands
+os.system('pip install yfinance')
+
+import yfinance as yf
+
 # Streamlit sidebar configuration
 st.sidebar.title("Stock Prediction and Options Strategy App")
 selected_stock = st.sidebar.text_input("Enter Stock Ticker (e.g., AAPL, GOOG, MSFT):", "AAPL")
